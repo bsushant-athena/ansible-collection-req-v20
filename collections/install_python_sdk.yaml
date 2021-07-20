@@ -1,9 +1,8 @@
 ---
 - name: Install pythong sdk
+  hosts: localhost
   collections:
     - oracle.oci
-  connection: local
-  hosts: localhost
   tasks:
   - name: Installing oci python library using Ansible pip module
     pip:
