@@ -1,3 +1,2 @@
----
-roles:
-  - name: oracle.oci_ansible_modules
+collections:
+  - name: oracle.oci
