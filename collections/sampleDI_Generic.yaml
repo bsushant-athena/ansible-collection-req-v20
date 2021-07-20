@@ -1,0 +1,30 @@
+---
+- name: Install nginx and verify
+  hosts: ansible-testing
+  collections:
+    - oracle.oci
+
+  tasks:
+    - name: Add epel-release repo
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: "Check if NGINX is installed"
+      package_facts:
+        manager: auto
+
+    - name: "NGINX test result"
+      debug:
+        msg: "NGINX found"
+      when: "'nginx' in ansible_facts.packages"
+
+    - name: "NGINX test result"
+      debug:
+        msg: "NGINX NOT found"
+      when: "'nginx' not in ansible_facts.packages"
