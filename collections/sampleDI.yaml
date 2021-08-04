@@ -1,3 +1,4 @@
+---
 - name: Get namespace name
   hosts: ansible-testing
   collections:
