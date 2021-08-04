@@ -1,6 +1,6 @@
 ---
 - name: Install nginx and verify
-  hosts: ansible-testing
+  hosts: bmcs-dex-us-ashburn-1
   collections:
     - oracle.oci
 
