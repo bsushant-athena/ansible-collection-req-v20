@@ -1,5 +1,5 @@
 - name: Get namespace name
-  hosts: bmcs-dex-us-ashburn-1
+  hosts: ansible-testing
   collections:
     - oracle.oci
   tasks:
