@@ -1,6 +1,6 @@
 ---
 - name: Get namespace name
-  hosts: ansible-testing
+  hosts: AnsibleIntegrationTestCompartment1
   collections:
     - oracle.oci
   tasks:
